@@ -10,6 +10,12 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+      integrity="sha384-CK2SzKma4jA5H/MXDUU7i1TqZlCFaD4T01vtyDFvPlD97JQyS+IsSh1nI2EFbpyk"
+      crossorigin="anonymous"
+    />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
@@ -18,17 +24,24 @@
   </head>
 
   <body>
-    <header data-bs-theme="dark">
-      <nav class="navbar navbar-expand-md fixed-top bg-dark">
+    <header class="container-fluid py-5">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">PORTAL</a>
+          <a class="navbar-brand" href="#"
+            ><img src="images/photo2.png" width="35" height="35"
+          /></a>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
               <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="#"
+                  ><i class="bi bi-power"></i>WiseOffice</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">ドキュメント</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">問い合わせ</a>
               </li>
             </ul>
           </div>
@@ -36,6 +49,63 @@
       </nav>
     </header>
 
-    <main></main>
+    <!-- Hero -->
+    <main class="container">
+      <div class="p-2 mb-4 rounded text-body-emphasis bg-body-secondary">
+        <h1 class="display-5">次期基幹システムへようこそ</h1>
+        <p class="lead my-3">迷ったらこのサイトから始めましょう</p>
+      </div>
+
+      <div class="container">
+        <ul class="nav nav-tabs">
+          <!-- タブ -->
+          <li class="nav-item">
+            <button
+              class="nav-link active"
+              data-bs-toggle="tab"
+              data-bs-target="#photo1"
+              type="button"
+            >
+              タブ1
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link"
+              data-bs-toggle="tab"
+              data-bs-target="#photo2"
+              type="button"
+            >
+              タブ2
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link"
+              data-bs-toggle="tab"
+              data-bs-target="#photo3"
+              type="button"
+            >
+              タブ3
+            </button>
+          </li>
+          <!-- タブ -->
+
+          <!-- 各タブのコンテンツ -->
+          <div class="tab-content">
+            <div id="photo1" class="tab-pane active">
+              <img src="images/photo1.jpg" class="img-fluid" />
+            </div>
+            <div id="photo2" class="tab-pane">
+              <img src="images/photo3.jpg" class="img-fluid" />
+            </div>
+            <div id="photo3" class="tab-pane">
+              <img src="images/photo4.jpg" class="img-fluid" />
+            </div>
+          </div>
+          <!-- 各タブのコンテンツ -->
+        </ul>
+      </div>
+    </main>
   </body>
 </html>
