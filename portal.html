@@ -21,19 +21,67 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
+    <style>
+      /* ラッパー（外側の要素） */
+      .video-wrapper {
+        aspect-ratio: 16 / 9; /* 縦横比（アスペクト比） */
+        position: relative; /* 絶対配置するコンテンツや疑似要素の基準とする */
+        width: 100%;
+        max-width: 1600px;
+      }
+
+      /* video 要素 */
+      .video-wrapper video {
+        width: 100%; /* 明示的に幅を設定（必須） */
+        height: auto; /* 明示的に高さを設定（必須） */
+        object-fit: cover; /* コンテンツボックスに収まるように拡大縮小 */
+        object-position: 100% 20%; /* 位置の調整 */
+      }
+
+      .video-content {
+        margin: 0;
+        position: absolute; /* 絶対配置 */
+        top: 43%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        text-align: center;
+      }
+
+      #content .video-content h2 {
+        font-size: 2rem;
+        letter-spacing: 0.1rem;
+        text-shadow: 2px 2px 2px #444;
+        color: #fff;
+      }
+
+      .video-content p {
+        max-width: 600px;
+        padding: 0 2rem;
+      }
+    </style>
   </head>
 
   <body>
-    <div class="video-wrap">
-      <video
-        src="images/movie1.mp4"
-        autoplay
-        loop
-        muted
-        playsinline
-        height="100%"
-        width="100%"
-      ></video>
+    <div class="d-flex justify-content-end">
+      <button
+        class="btn btn-sm"
+        data-bs-toggle="collapse"
+        href="#v1"
+        aria-controls="v1"
+      >
+        <i class="bi bi-film"></i> 表示切替
+      </button>
+    </div>
+    <div class="collapse show py-0 m-0" id="v1">
+      <div class="video-wrapper">
+        <video src="images/movie1.mp4" muted loop playsinline autoplay></video>
+        <div class="video-content">
+          <h2>Video Background</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+        </div>
+      </div>
     </div>
   </body>
 </html>
